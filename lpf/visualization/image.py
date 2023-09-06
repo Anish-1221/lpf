@@ -268,7 +268,8 @@ def merge_single_timeseries(imgs=None,
             raise ValueError("font_size should be integer type, not %s"%(type(font_size)))
 
         if not font:
-            font = ImageFont.truetype("arial.ttf", font_size, encoding="UTF-8")
+            # font = ImageFont.truetype("arial.ttf", font_size, encoding="UTF-8")
+            font = ImageFont.load_default()
 
         if not text_margin_ratio:
             text_margin_ratio = 0.2
